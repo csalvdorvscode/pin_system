@@ -21,4 +21,4 @@ It is designed to practice ** conditional statments (`if/else`)**, ** loops ( `w
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YourUsername/sistema-pin.git
+git clone https://github.com/csalvdorvscode/pin_system.git
