@@ -1,32 +1,64 @@
-MARKDOWN
+# 🔐 PIN System
 
-# Python PIN system
-
-This project is a simple ** PIN System ** written in Python.
-It is designed to practice ** conditional statements (`if/else`)**, ** loops ( `while `) **, and ** basic user input handling **.
-
----
+A simple Python project that simulates a PIN authentication system.
 
 ## Features
 
-- Prompts the user to enter a PIN.
-- Checks if the entered PIN is correct.
-- Controls the maximum number of attemps.
-- Blocks the account if the maximum number of attempts is reached.
-- Shows remaining attempts to the user (optional enhancement).
+- User authentication with a PIN
+- Maximum of 3 login attempts
+- Account lock after too many failed attempts
+- Input validation (only numeric characters are accepted)
+- PIN stored as a string to support leading zeros (e.g. "0123")
 
+## Technologies
 
-## How to use
+- Python 3
 
-1. Clone the repository:
+## How to Run
+
+1. Clone this repository:
+
 ```bash
-git clone https://github.com/csalvdorvscode/pin_system.git
+git clone https://github.com/yourusername/pin-system.git
 ```
-## Technologies used
-- Language:Python 3.13+
-- Modules:Core Python (no external dependencies required).
 
-## Learning goals & concepts practiced
-- Control Flow: Using while loops to maintain the program running until access is granted or blocked.
-- Conditionals: if/else structures for matching PINs and checking maximun attemps.
-- Exception handling: Implementing try/except ValueError to filter out invalid keyboard inputs and improve code resilience.
+2. Open the project folder.
+
+3. Run:
+
+```bash
+python pin_system.py
+```
+
+## Example
+
+```
+PIN SYSTEM
+
+Enter your PIN: 1111
+Incorrect PIN (1/3)
+
+Enter your PIN: hello
+Invalid input. Only numbers are allowed. (2/3)
+
+Enter your PIN: 1234
+Correct PIN. Access granted.
+```
+
+## What I Learned
+
+This project helped me practice:
+
+- while loops
+- if / else statements
+- input validation with `isdigit()`
+- string comparison
+- variables
+- writing clean and readable Python code
+
+## Future Improvements
+
+- Hide the PIN while typing.
+- Generate a random PIN.
+- Store the PIN securely using hashing.
+- Allow the user to change the PIN.
