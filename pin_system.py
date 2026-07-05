@@ -1,25 +1,27 @@
-#SISTEMA DE PIN:
->>> 
->>> pin_correcto = 1234
-intentos = 0
-max_intentos = 3
+# PIN SYSTEM
 
-print("SISTEMA DE PIN")
+correct_pin = "1234"  # Stored as a string to allow leading zeros (e.g., "0123")
+attempts = 0
+max_attempts = 3
 
-while intentos < max_intentos:
-    try:
-        pin_usuario = int(input("Introduce el PIN: "))
+print("PIN SYSTEM")
 
-        if pin_usuario == pin_correcto:
-            print("PIN correcto. Acceso permitido.")
-            break
-        else:
-            intentos += 1
-            print(f"PIN incorrecto ({intentos}/{max_intentos})")
+while attempts < max_attempts:
+    user_pin = input("Enter PIN: ")
 
-    except ValueError:
-        intentos += 1
-        print(f"Entrada no válida ({intentos}/{max_intentos})")
+    # Validate that the input contains only numbers
+    if not user_pin.isdigit():
+        attempts += 1
+        print(f"Invalid input. Only numbers are allowed. ({attempts}/{max_attempts})")
+        continue  # Skip the rest of the loop and move to the next attempt
 
-if intentos == max_intentos:
-    print("Cuenta bloqueada")
+    if user_pin == correct_pin:
+        print("Correct PIN. Access granted.")
+        break
+    else:
+        attempts += 1
+        print(f"Incorrect PIN ({attempts}/{max_attempts})")
+
+if attempts == max_attempts:
+    print("Account locked")
+
